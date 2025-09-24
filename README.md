@@ -94,7 +94,9 @@ This creates `/usr/local/share/uhd/images` and fills it with the standard `.hex`
 
 ## 4. Install FPGA Firmware for U220
 
-The stock UHD images package includes the default B200/B210 images. For U220 to function as a B210,you must replace the FPGA binary.
+The stock UHD images package includes the default B200/B210 images. For U220 to function as a B210,you must replace the FPGA binary. 
+
+UPDATE: These files can also be found in this repo and are already renamed and ready to be moved into the `/usr/local/share/uhd/images/` folder. If you go this route, skip to step 4.
 
 1. Go to the [AntSDR UHD Releases page](https://github.com/MicroPhase/antsdr_uhd/releases).
 
@@ -164,7 +166,7 @@ Double-click **Launch-SDRAngel.command** to start SDRAngel with UHD correctly co
 3. In SDRAngel’s device drop-down, select the **U220**.
 
    ![dropdown](images/dropdown.png)
-   
+
 4. The Terminal log should then show:
 
    ```
