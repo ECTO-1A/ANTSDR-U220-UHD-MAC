@@ -68,6 +68,7 @@ system_profiler SPUSBDataType | grep -A5 U2
 
 You should see: 
 
+![USB 3 Confirmation](images/uhd_u220_setup_1.png)
 ```
 Serial Number: U220200
           Link Speed: 5 Gb/s
