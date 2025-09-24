@@ -124,7 +124,7 @@ Now UHD will load the U220’s custom FPGA image instead of the stock B210 bitst
 
 ---
 
-## 4. Create a Launcher for SDRAngel
+## 5. Create a Launcher for SDRAngel
 
 Make a `.command` script so SDRAngel can find UHD and its images:
 
@@ -149,7 +149,7 @@ Double-click **Launch-SDRAngel.command** to start SDRAngel with UHD correctly co
 
 ---
 
-## 5. Run and Confirm
+## 6. Run and Confirm
 
 1. Launch SDRAngel using the `.command` file.
 
@@ -168,6 +168,7 @@ Double-click **Launch-SDRAngel.command** to start SDRAngel with UHD correctly co
    ```
    Loading usrp_b210_fpga.bin
    ```
+![FPGA Load](images/fpga_load.png)
 
    → This confirms the FPGA bitstream loaded.
 
