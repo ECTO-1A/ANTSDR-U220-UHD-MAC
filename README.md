@@ -163,12 +163,14 @@ Double-click **Launch-SDRAngel.command** to start SDRAngel with UHD correctly co
 
 3. In SDRAngel’s device drop-down, select the **U220**.
 
+   ![dropdown](images/dropdown.png)
+   
 4. The Terminal log should then show:
 
    ```
    Loading usrp_b210_fpga.bin
    ```
-![FPGA Load](images/fpga_load.png)
+   ![FPGA Load](images/fpga_load.png)
 
    → This confirms the FPGA bitstream loaded.
 
