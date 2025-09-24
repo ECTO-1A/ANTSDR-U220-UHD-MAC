@@ -79,9 +79,21 @@ Serial Number: U220200
 
 ---
 
-## 3. Install FPGA Firmware for U220
+## 3. Install UHD Images Bundle
 
-The stock UHD images package only includes B200/B210 images. For U220 you must replace the FPGA binary.
+Before replacing the FPGA binary, first download the standard UHD image set:
+
+```bash
+sudo python3 /usr/local/lib/uhd/utils/uhd_images_downloader.py -i /usr/local/share/uhd/images
+```
+
+This creates `/usr/local/share/uhd/images` and fills it with the standard `.hex` and `.rbf`/`.bin` files.
+
+---
+
+## 4. Install FPGA Firmware for U220
+
+The stock UHD images package includes the default B200/B210 images. For U220 to function as a B210,you must replace the FPGA binary.
 
 1. Go to the [AntSDR UHD Releases page](https://github.com/MicroPhase/antsdr_uhd/releases).
 
@@ -98,9 +110,14 @@ The stock UHD images package only includes B200/B210 images. For U220 you must r
 
 4. Replace the file in UHD’s images directory:
 
-   ```bash
-   sudo cp ~/Downloads/usrp_b210_fpga.bin /usr/local/share/uhd/images/usrp_b210_fpga.bin
-   ```
+```
+# (Optional) back up the stock fpga file first
+sudo mv /usr/local/share/uhd/images/usrp_b210_fpga.bin \
+        /usr/local/share/uhd/images/usrp_b210_fpga.bin.bak
+
+# Then copy in the U220-specific one
+sudo cp ~/Downloads/usrp_b210_fpga.bin /usr/local/share/uhd/images/usrp_b210_fpga.bin
+```
 
 Now UHD will load the U220’s custom FPGA image instead of the stock B210 bitstream.
 
